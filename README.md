@@ -1,5 +1,4 @@
 **_CURRENTLY IN PRE-ALPHA_**
-[![Inline docs](http://inch-ci.org/github/zinc-material/zinc-material.svg?branch=master)](http://inch-ci.org/github/{zinc-material/zinc-material)
 
 # Zinc Material
 **A responsive set of components that follows Material Design.**
