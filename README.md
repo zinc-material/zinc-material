@@ -7,5 +7,5 @@
 
 #### Screenshots
 ![Screenshot 1](https://i.imgur.com/Q6TtQBe.png)
-![Screenshot 2](https://i.imgur.com/vkLFQcL.png)
+![Screenshot 2](https://i.imgur.com/VLEHFvf.png)
 ![Screenshot 3](https://i.imgur.com/0AwEhkq.png)
