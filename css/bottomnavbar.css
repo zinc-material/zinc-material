@@ -1,0 +1,100 @@
+/* BOTTOM NAVBAR */
+
+.zn-bottom-navbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 56px;
+    min-height: 56px;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 110;
+    box-shadow: var(--z-2dp);
+}
+
+.zn-bottom-navbar-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: auto;
+    min-width: 80px;
+    max-width: 168px;
+    height: 100%;
+    padding: 8px 12px 10px;
+    color: var(--zn-text-dark-sec);
+    box-sizing: border-box;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+}
+
+.zn-bottom-navbar-item .zn-icon {
+    transition: .14s var(--ease-in-out);
+}
+
+.zn-bottom-navbar-item .zn-text {
+    transition: .18s var(--ease-in-out);
+}
+
+.zn-bottom-navbar-item .zn-text {
+    font-size: 14px;
+    font-weight: 400;
+    transform: scale(0.85);
+    transform-origin: bottom center;
+}
+
+.zn-bottom-navbar-item.zn-active {
+    color: var(--zn-primary);
+}
+
+.zn-bottom-navbar-item.zn-active .zn-icon {
+    transform: translateY(-2px);
+}
+
+.zn-bottom-navbar-item.zn-active .zn-text {
+    transform: scale(1);
+}
+
+.zn-bottom-navbar-item > .zn-ripple-container {
+    background-color: var(--zn-primary);
+}
+
+.zn-bottom-navbar.zn-shift .zn-bottom-navbar-item {
+    color: var(--zn-text-light-sec);
+    transition: .26s var(--ease-out);
+    min-width: 56px;
+    max-width: 96px;
+}
+
+.zn-bottom-navbar.zn-shift .zn-bottom-navbar-item.zn-active {
+    color: var(--zn-text-light);
+    min-width: 96px;
+    max-width: 168px;
+}
+
+.zn-bottom-navbar.zn-shift .zn-bottom-navbar-item .zn-icon {
+    transition: .18s var(--ease-in-out);
+    transform: translateY(8px);
+}
+
+.zn-bottom-navbar.zn-shift .zn-bottom-navbar-item.zn-active .zn-icon {
+    transform: translateY(-2px);
+}
+
+.zn-bottom-navbar.zn-shift .zn-bottom-navbar-item .zn-text {
+    transition: .12s var(--ease-in-out);
+    transform: translateY(2px);
+    opacity: 0;
+}
+
+.zn-bottom-navbar.zn-shift .zn-bottom-navbar-item.zn-active .zn-text {
+    transform: translateY(1px);
+    opacity: 1;
+}
+
+/* END BOTTOM NAVBAR */

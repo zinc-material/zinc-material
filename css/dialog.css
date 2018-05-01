@@ -1,0 +1,204 @@
+/* DIALOG */
+
+.zn-dialog-wrapper {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 110;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.zn-dialog {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 256px;
+    max-height: 100%;
+    margin: 40px 80px;
+    background-color: #fafafa;
+    box-shadow: var(--z-16dp);
+    user-select: none;
+    cursor: default;
+    pointer-events: none;
+    transform: translate3d(0, 32px, 0);
+    opacity: 0;
+    transition: .24s var(--ease-in-out);
+}
+
+.zn-dialog-wrapper .zn-dialog {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.zn-dialog-wrapper.zn-show .zn-dialog,
+.zn-dialog.zn-show {
+    pointer-events: auto;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.zn-dialog-header {
+    flex: 1 0;
+    user-select: none;
+    padding: 24px 24px 20px;
+}
+
+.zn-dialog-title {
+    font-size: 20px;
+    padding-bottom: 0;
+}
+
+.zn-dialog-content {
+    flex: 0 1;
+    padding: 24px;
+    overflow: auto;
+    font-size: 16px;
+    color: var(--zn-text-dark-sec);
+}
+
+.zn-dialog-header ~ .zn-dialog-content {
+    padding-top: 0;
+}
+
+.zn-dialog-content::-webkit-scrollbar-track {
+	background-color: rgba(200, 200, 200, 0.54);
+}
+
+.zn-dialog-content::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+    overflow: hidden;
+	background-color: rgba(200, 200, 200, 0.54);
+}
+
+.zn-dialog-content::-webkit-scrollbar-thumb {
+	background-color: rgba(148, 148, 148, 0.87);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.zn-dialog-content::-webkit-scrollbar-thumb:hover {
+    border-radius: 2px;
+	background-color: rgba(132, 132, 132, 0.87);
+}
+
+
+.zn-dialog-user-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.zn-dialog-actions {
+    padding: 2px 4px;
+    flex: 1 0;
+    justify-content: flex-end;
+}
+
+.zn-dialog-scrim {
+    z-index: 109;
+}
+
+/* Text field */
+
+.zn-dialog-content > .zn-text-field {
+    margin: 8px 0;
+}
+
+.zn-dialog-content > .zn-text-field:first-child  {
+    margin-top: 0;
+}
+
+.zn-dialog-content > .zn-text-field:last-child  {
+    margin-bottom: 0;
+}
+
+
+/* List */
+
+.zn-dialog-list-padding-clear {
+    margin: -16px -24px -24px;
+}
+
+.zn-dialog-header ~ .zn-dialog-content .zn-dialog-list-padding-clear {
+    margin-top: 0;
+}
+
+.zn-dialog .zn-dialog-list-padding-clear .zn-list {
+    padding: 0;
+}
+
+.zn-dialog .zn-list-item {
+    padding: 0 24px;
+}
+
+.zn-dialog .zn-list-item .zn-dialog-select:not(.zn-dialog-secondary) {
+    margin-right: 8px;
+}
+
+
+.zn-dialog-user-content ~ .zn-dialog-list-padding-clear {
+    margin-top: 0;
+}
+
+.zn-dialog-list-padding-clear ~ .zn-dialog-user-content {
+    margin-top: 24px;
+}
+
+
+/* Stacked actions */
+
+.zn-dialog-actions.zn-stacked  {
+    padding: 0;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.zn-dialog-actions.zn-stacked  .zn-button {
+    height: 36px;
+    min-height: 36px;
+    padding: 0 8px;
+    margin: 6px 8px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+
+/* Scrollable content */
+
+.zn-dialog.zn-scrollable .zn-dialog-header {
+    box-shadow: inset 0 -1px rgba(0, 0, 0, .12);
+}
+
+.zn-dialog.zn-scrollable .zn-dialog-actions {
+    background-color: #fafafa;
+    box-shadow: inset 0 1px rgba(0, 0, 0, .12);
+}
+
+
+/* Media*/
+
+@media (max-width: 720px) {
+
+    .zn-dialog-wrapper {
+        padding: 20px 0;
+    }
+
+    .zn-dialog {
+        margin: 24px 40px;
+    }
+
+}
+
+/* END DIALOG */

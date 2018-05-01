@@ -1,0 +1,114 @@
+/* CARD */
+
+.zn-card,
+.zn-dialog {
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    min-height: 64px;
+    margin: 16px;
+    background-color: #fff;
+    box-shadow: var(--z-2dp);
+    border-radius: var(--zn-card-border);
+    word-break: break-word;
+}
+
+.zn-card-header,
+.zn-dialog-header {
+    position: relative;
+    overflow: hidden;
+    padding: 24px 24px 16px;
+    color: var(--text-dark);
+}
+
+.zn-card-title, .zn-card-subtitle,
+.zn-dialog-title, .zn-dialog-subtitle {
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.zn-card-title,
+.zn-dialog-title {
+    padding-bottom: 4px;
+}
+
+.zn-card-title.zn-large,
+.zn-dialog-title.zn-large {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.zn-card-subtitle,
+.zn-dialog-subtitle {
+    color: var(--zn-text-dark-sec);
+}
+
+.zn-card-content,
+.zn-dialog-content {
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 16px 24px 24px;
+    color: var(--text-dark);
+}
+
+.zn-card-rich-media {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.zn-card-rich-media {
+    content: '';
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.zn-card-header .zn-avatar {
+    margin-right: 16px;
+}
+
+.zn-card-actions,
+.zn-dialog-actions {
+    position: relative;
+    padding: 2px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.zn-card-actions .zn-button:not(.zn-fab):not(.zn-icon):not(.zn-mini),
+.zn-dialog-actions .zn-button {
+    margin-left: 4px;
+    margin-right: 4px;
+    min-width: 64px;
+    padding: 0 8px;
+    text-transform: none;
+}
+
+.zn-card.zn-has-divider .zn-card-actions {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+@media ( max-width: 720px ) {
+
+    .zn-card {
+        margin: 8px;
+    }
+
+    .zn-card-header {
+        padding: 16px;
+    }
+
+    .zn-card-content {
+        padding: 16px;
+    }
+
+}
+
+/* END CARD */

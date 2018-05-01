@@ -1,0 +1,210 @@
+/* TEXT FIELD */
+
+.zn-text-field {
+    --zn-component-color: var(--zn-primary);
+}
+
+.zn-text-field.zn-accent {
+    --zn-component-color: var(--zn-accent);
+}
+
+.zn-text-field {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+    box-sizing: border-box;
+	margin: 24px 0;
+}
+
+.zn-text-field[zn-full-width] {
+	width: 100%;
+}
+
+.zn-text-field .zn-input {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    vertical-align: top;
+    caret-color: var(--zn-component-color);
+    color: var(--zn-text-dark);
+}
+
+.zn-text-field .zn-input::selection {
+    color: var(--zn-text-light);
+    background-color: var(--zn-component-color);
+}
+
+.zn-text-field .zn-input::placeholder,
+.zn-text-field .zn-input:focus::placeholder,
+.zn-text-field .zn-input:active::placeholder {
+    color: var(--zn-text-dark-sec);
+}
+
+.zn-text-field .zn-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--zn-text-dark-sec);
+    transform: translateY(6px);
+    transform-origin: left bottom;
+    user-select: none;
+    transition: .14s var(--ease-in-out);
+    pointer-events: none;
+}
+
+.zn-text-field .zn-input,
+.zn-text-field .zn-input::placeholder,
+.zn-text-field .zn-label {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.zn-text-field.zn-has-value .zn-label,
+.zn-text-field.zn-focused .zn-label {
+	transform: translateY(-16px) scale(0.75);
+}
+
+.zn-text-field.zn-focused .zn-label {
+    opacity: .87;
+	color: var(--zn-component-color);
+}
+
+.zn-text-field .zn-input-border {
+    width: 100%;
+    height: 2px;
+    background-color: var(--zn-component-color);
+    margin-top: -1px;
+    z-index: 1;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: 50% 50%;
+    opacity: 0;
+    transition: opacity .12s, transform .48s var(--ease-in-out);
+}
+
+.zn-text-field.zn-focused .zn-input-border {
+	transform: scaleX(1);
+	opacity: 1;
+	transition: opacity 0s, transform .32s var(--ease-in-out);
+}
+
+.zn-text-field[zn-no-float] .zn-label {
+    color: var(--zn-text-dark-sec);
+    transform: translateY(6px);
+}
+
+.zn-text-field .zn-input:disabled ~ label,
+.zn-text-field .zn-input:disabled {
+    color: rgba(0,0,0,.42) !important;
+}
+
+.zn-text-field .zn-input:disabled {
+    border-bottom: 1px solid transparent;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.42) 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 4px 1px;
+    background-repeat: repeat-x;
+    box-shadow: none;
+}
+
+
+/* INPUT */
+
+.zn-text-field .zn-input {
+    position: relative;
+    height: 32px;
+    border-bottom: 1px solid rgba(0,0,0,.42);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* END INPUT */
+
+
+/* MULTI-LINE */
+
+.zn-text-field textarea.zn-input {
+    resize: none;
+    padding-top: 6px;
+    padding-bottom: 12px;
+    height: auto;
+    min-height: 112px;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+/* END MULTI-LINE */
+
+
+/* TEXTAREA */
+
+.zn-text-field .zn-textarea {
+    padding: 12px;
+    padding-top: 32px;
+    max-height: 112px;
+    min-height: 112px;
+    border: 0;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.42);
+    transition: .12s var(--ease-in-out);
+}
+
+.zn-text-field.zn-focused .zn-textarea {
+    box-shadow: 0 0 0 2px var(--zn-component-color);
+}
+
+.zn-text-field .zn-textarea textarea.zn-input {
+    padding: 0;
+    max-height: 112px;
+    min-height: 112px;
+    border: 0;
+}
+
+.zn-text-field .zn-textarea .zn-input-border {
+    display: none;
+}
+
+.zn-text-field .zn-textarea .zn-label {
+    transform: translate(12px, 12px);
+}
+
+.zn-text-field.zn-has-value .zn-textarea .zn-label,
+.zn-text-field.zn-focused .zn-textarea .zn-label,
+.zn-text-field.zn-disabled .zn-textarea .zn-label {
+	transform: translate(12px, 2px) scale(0.75);
+}
+
+.zn-text-field.zn-disabled .zn-textarea {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.42);
+    background-color: rgba(0, 0, 0, .08);
+}
+
+.zn-text-field .zn-textarea .zn-input:disabled {
+    background-image: none;
+}
+
+
+
+/* END TEXTAREA */
+
+.zn-text-field .zn-input-helper {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--zn-text-dark-sec);
+    user-select: none;
+    cursor: default;
+}
+
+.zn-text-field .zn-input-helper.zn-counter {
+    justify-content: flex-end;
+}
+
+/* END TEXT FIELD */

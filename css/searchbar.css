@@ -1,0 +1,75 @@
+/* SEARCHBAR */
+
+.zn-searchbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 12px;
+    margin: 8px;
+    background-color: #fafafa;
+    border-radius: 48px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0.4px rgba(0, 0, 0, 0.16), 0 1px 4px rgba(0, 0, 0, 0.24);
+    transition: var(--ease-in-out) .1s;
+}
+
+.zn-searchbar-input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    flex: 1;
+    color: var(--zn-text-dark);
+    background-color: transparent;
+    caret-color: var(--zn-text-dark);
+    vertical-align: top;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.zn-searchbar-input,
+.zn-searchbar-input::placeholder {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.zn-searchbar-input::placeholder {
+    color: var(--zn-text-dark-sec);
+}
+
+.zn-searchbar .zn-button {
+    color: var(--zn-text-dark-sec);
+    margin: 0 6px;
+}
+
+.zn-searchbar > .zn-button:first-child {
+    margin-left: -8px;
+    margin-right: 24px;
+}
+
+.zn-searchbar > .zn-button:last-child {
+    margin-right: -8px;
+}
+
+.zn-searchbar.zn-full-width {
+    height: 64px;
+    min-height: 64px;
+    margin: 0;
+    border-radius: 0;
+}
+
+@media (max-width: 720px) {
+
+    .zn-searchbar.zn-full-width {
+        height: 56px;
+        min-height: 56px;
+    }
+
+}
+
+/* END SEARCHBAR */

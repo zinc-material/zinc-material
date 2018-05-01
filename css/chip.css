@@ -1,0 +1,62 @@
+/* CHIP */
+
+.zn-chip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    min-height: 32px;
+    padding: 0 12px;
+    margin: 2px;
+    background-color: rgba(0, 0, 0, .12);
+    font-size: 13px;
+    font-weight: 400;
+    align-self: flex-start;
+    border-radius: 16px;
+    color: var(--zn-text-dark);
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.zn-chip-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 32px;
+    width: 32px;
+    min-height: 32px;
+    min-width: 32px;
+    margin-right: 8px;
+    margin-left: -12px;
+    border-radius: 50%;
+    color: var(--zn-text-light);
+    background-color: var(--zn-accent);
+    user-select: none;
+    cursor: default;
+}
+
+.zn-chip-action {
+    position: relative;
+    margin-right: -6px;
+    margin-left: 4px;
+    font-size: 20px;
+    color: var(--zn-text-dark-hint);
+    cursor: pointer;
+}
+
+.zn-chip:hover,
+.zn-chip:active {
+    color: var(--zn-text-light);
+    background-color: rgba(0, 0, 0, .56);
+    box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.14), 0 1px 5px 1px rgba(0, 0, 0, 0.24);
+}
+
+.zn-chip:hover .zn-chip-action,
+.zn-chip:active .zn-chip-action {
+    color: var(--zn-text-light-sec);
+}
+
+/* END CHIP */

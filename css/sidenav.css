@@ -1,0 +1,64 @@
+/* SIDENAV */
+
+.zn-sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: initial;
+    width: calc(100% - 56px);
+    height: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-width: 320px;
+    box-shadow: none;
+    z-index: 100;
+    transform: translate3d(-100%, 0, 0);
+    transition: .28s var(--sharp);
+    will-change: transform;
+}
+
+.zn-sidenav.zn-right {
+    left: initial;
+    right: 0;
+    transform: translate3d(100%, 0, 0);
+}
+
+.zn-sidenav.zn-active {
+    box-shadow: var(--z-16dp);
+    transform: translate3d(0, 0, 0);
+    transition: .28s var(--ease-out);
+}
+
+.zn-sidenav.zn-static {
+    position: relative;
+    flex-shrink: 0;
+    transform: translate3d(0, 0, 0);
+    box-shadow: none;
+    max-width: 280px;
+    z-index: 12;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.zn-clear-transition {
+    transition: 0s !important;
+}
+
+.zn-sidenav.zn-static.zn-right {
+    border-right: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.zn-sidenav .zn-list-item {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+@media ( max-width: 720px ) {
+    .zn-sidenav {
+        max-width: 280px;
+    }
+}
+
+/* END SIDENAV */

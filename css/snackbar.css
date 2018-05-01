@@ -1,0 +1,140 @@
+/* SNACKBAR */
+
+[zn-animation-root] {
+    position: relative;
+}
+
+.zn-snackbar-wrapper {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 100;
+    transform: translateY(100%);
+    overflow: hidden;
+}
+
+[zn-has-bottom-navbar] .zn-snackbar-wrapper {
+    bottom: 56px;
+}
+
+.zn-snackbar-wrapper.zn-snackbar-center {
+    justify-content: center;
+}
+
+.zn-snackbar-wrapper.zn-show {
+    transform: translateY(0);
+}
+
+.zn-snackbar-wrapper.zn-show .zn-snackbar {
+    pointer-events: all;
+}
+
+.zn-snackbar-wrapper, .zn-snackbar-animator {
+    transition: .32s var(--ease-in-out) !important;
+}
+
+.zn-snackbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    min-width: 288px;
+    max-width: 568px;
+    min-height: 48px;
+    padding: 0 24px;
+    margin: 0 0 24px 24px;
+    color: var(--zn-text-light);
+    background-color: #323232;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 2px;
+    box-shadow: 0px 1px 4px 0.2px rgba(0, 0, 0, 0.24), 0px 2px 7px 0.12px rgba(0, 0, 0, 0.16);
+    flex: 0 0 1;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: default;
+}
+
+.zn-snackbar-wrapper.zn-snackbar-two-line .zn-snackbar {
+    min-height: 80px;
+}
+
+.zn-snackbar-wrapper.zn-snackbar-center .zn-snackbar {
+    margin: 0;
+}
+
+.zn-snackbar .zn-snackbar-text {
+	width: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    line-height: 1;
+    transition: .32s var(--ease-in-out);
+}
+
+.zn-snackbar .zn-snackbar-action {
+    min-width: auto;
+    padding: 0;
+    margin: 0;
+    margin-left: 48px;
+    font-weight: 500;
+    transition: .32s var(--ease-in-out);
+}
+
+.zn-snackbar .zn-snackbar-text,
+.zn-snackbar .zn-snackbar-action {
+    transition: .56s var(--ease-in-out);
+    opacity: 0;
+}
+
+
+.zn-snackbar-wrapper.zn-show .zn-snackbar .zn-snackbar-text,
+.zn-snackbar-wrapper.zn-show .zn-snackbar .zn-snackbar-action {
+    opacity: 1;
+}
+
+
+.zn-snackbar .zn-snackbar-action::before,
+.zn-snackbar .zn-snackbar-action::after {
+    display: none;
+}
+
+.zn-snackbar .zn-snackbar-action.zn-primary {
+    color: var(--zn-primary-light);
+}
+
+.zn-snackbar .zn-snackbar-action.zn-accent {
+    color: var(--zn-accent-light);
+}
+
+@media (max-width: 720px) {
+
+    .zn-snackbar {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .zn-snackbar .zn-snackbar-action {
+        margin-left: 24px;
+    }
+
+}
+
+@media (min-width: 720px) {
+
+    .zn-snackbar-animator {
+        transform: none !important;
+    }
+
+}
+
+
+/* END SNACKBAR */
